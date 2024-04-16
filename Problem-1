@@ -1,0 +1,35 @@
+"""
+Given a list of length M, you need to print and find sum of the elements of list 
+
+Input Format :
+
+Line 1 : An int M 
+Line 2 : M int elements of list seperated by ';'
+
+Output Format:
+
+Addition 
+
+Constraints :
+1 <= M <= 10^6
+
+"""
+m = int(input())  #Taking input for length of the list
+n = input()  #Taking input the elements of the list which is separated by semicolon(;)
+a = []
+b = ""
+for i in n:
+    if i != ";":
+        b += i
+    else:
+        a.append(int(b))
+        b = ""
+if b:
+    a.append(int(b))
+c = a[::1]
+total = 0
+for b in c:
+    total += b
+
+if 1 <= m <= 10**6: #constraints
+    print(total)
